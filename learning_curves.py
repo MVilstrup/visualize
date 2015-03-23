@@ -71,7 +71,7 @@ def plot_learning_curves(training_data,
         data_range = np.arrange(1, training_data.shape[1]+1)
         
         for r in data_range:
-            classifier.fit(training_data[:, 0:r], training_targets]
+            classifier.fit(training_data[:, 0:r], training_targets)
             train_predictions = classifier.predict(training_data[:, 0:r])
             train_misclassifications = (train_predictions != training_targets).sum()
             training_errors.append(train_misclassifications / training_data.shape[0])
